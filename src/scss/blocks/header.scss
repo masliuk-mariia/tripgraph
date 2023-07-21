@@ -1,0 +1,11 @@
+.header {
+  background-color: #29384d;
+  &__logo {
+    padding: 0 0 0 29px;
+    width: 136px;
+    height: 35px;
+    @media(max-width: $phoneWidth){
+      padding: 0 0 0 23px;
+    }
+  }
+}

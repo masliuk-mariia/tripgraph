@@ -1,0 +1,385 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700&display=swap);
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.eot?sbt9fn");
+  src: url("../fonts/icons.eot?sbt9fn#iefix") format("embedded-opentype"), url("../fonts/icons.ttf?sbt9fn") format("truetype"), url("../fonts/icons.woff?sbt9fn") format("woff"), url("../fonts/icons.svg?sbt9fn#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-]::before,
+[class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bycicle:before {
+  content: "\e90e";
+}
+
+.icon-car:before {
+  content: "\e90f";
+}
+
+.icon-walking:before {
+  content: "\e910";
+}
+
+.icon-arrow:before {
+  content: "\e911";
+}
+
+.icon-calendar:before {
+  content: "\e904";
+}
+
+.icon-dashboard:before {
+  content: "\e905";
+}
+
+.icon-list:before {
+  content: "\e906";
+}
+
+.icon-pin:before {
+  content: "\e907";
+}
+
+.icon-plus:before {
+  content: "\e908";
+}
+
+.icon-settings:before {
+  content: "\e909";
+}
+
+.icon-smile-bad:before {
+  content: "\e90a";
+}
+
+.icon-smile-good:before {
+  content: "\e90b";
+}
+
+.icon-smile-normal:before {
+  content: "\e90c";
+}
+
+.icon-star:before {
+  content: "\e90d";
+}
+
+.icon-fb:before {
+  content: "\e900";
+}
+
+.icon-insta:before {
+  content: "\e901";
+}
+
+.icon-linkedin:before {
+  content: "\e902";
+}
+
+.icon-twitter:before {
+  content: "\e903";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-style: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+ul,
+ol,
+li {
+  list-type: none;
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+._wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  width: 768px;
+  margin: 0 auto;
+  background-color: #182948;
+  background-image: url("../img/bg.png") center bottom/cover;
+}
+@media (max-width: 768px) {
+  ._container {
+    width: 100%;
+    padding: 0 23px;
+  }
+}
+
+._ibg {
+  position: relative;
+}
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.header {
+  background-color: #29384d;
+}
+.header__logo {
+  padding: 0 0 0 29px;
+  width: 136px;
+  height: 35px;
+}
+@media (max-width: 500px) {
+  .header__logo {
+    padding: 0 0 0 23px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav__body {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 23px;
+    margin: 0;
+    background-image: linear-gradient(to right, #f1cd51, #d6566b);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
+.nav__item {
+  padding: 9px 10px 9px 23px;
+}
+@media (max-width: 500px) {
+  .nav__item {
+    padding: 0;
+  }
+}
+.nav__item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav__link {
+  color: #fff;
+}
+.nav__link i {
+  margin-right: 13px;
+}
+@media (max-width: 500px) {
+  .nav__link i {
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .nav__link span {
+    display: none;
+  }
+}
+.nav__link:hover {
+  color: orange;
+}
+
+.aside__body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #29384d;
+  padding-left: 23px;
+}
+@media (max-width: 500px) {
+  .aside__body {
+    background-color: transparent;
+  }
+}
+.aside__body > *:not(:last-child) {
+  margin: 0 25px 0 0;
+}
+.aside__link {
+  color: #fff;
+}
+.aside__link i {
+  margin-right: 10px;
+}
+
+.avatar__body {
+  padding: 0 0 0 28px;
+}
+@media (max-width: 500px) {
+  .avatar__body {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.avatar__logo {
+  margin: 15px 0 18px 0;
+}
+@media (max-width: 500px) {
+  .avatar__logo {
+    height: 100%;
+    padding-right: 23px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #29384d;
+  }
+}
+.avatar__logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+@media (max-width: 500px) {
+  .avatar__logo img {
+    width: 32px;
+    height: 32px;
+  }
+}
+.avatar__title {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.26px;
+  color: #fefefe;
+}
+@media (max-width: 500px) {
+  .avatar__title {
+    display: none;
+  }
+}
+
+.trips__grid {
+  flex: 1 1 auto;
+  width: 768px;
+  margin: 0 auto;
+  background-color: #182948;
+  background-image: url("../img/bg.png");
+  display: grid;
+  grid-template-columns: 208px 1fr;
+  grid-template-rows: 48px 1fr 158px;
+  grid-template-areas: "header aside" "nav main" "avatar main";
+}
+@media (max-width: 500px) {
+  .trips__grid {
+    width: 100%;
+    padding: 0;
+    background-color: #2d3a53;
+    background-image: none;
+  }
+}
+@media (max-width: 500px) {
+  .trips__grid {
+    grid-template-columns: 1fr 38px;
+    grid-template-rows: 48px 48px 1fr 63px;
+    grid-template-areas: "header avatar" "aside aside" "main main" "nav nav";
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.avatar {
+  grid-area: avatar;
+}

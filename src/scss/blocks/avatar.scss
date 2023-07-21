@@ -1,0 +1,43 @@
+.avatar {
+
+  &__body {
+    padding: 0 0 0 28px;
+    @media (max-width: $phoneWidth){
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__logo {
+    margin: 15px 0 18px 0;
+    @media (max-width: $phoneWidth){
+      height: 100%;
+      padding-right: 23px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #29384d;
+    }
+    img{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      @media (max-width: $phoneWidth){
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.26px;
+    color: #fefefe;
+    @media (max-width: $phoneWidth){
+      display: none;
+    }
+  }
+}

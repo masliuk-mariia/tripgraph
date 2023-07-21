@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("html/blocks/head.html",{
+    "title": "My Document"
+  })
+  <body>
+    <div class="_wrapper">
+      <div class="_container">
+          @@include("html/blocks/header.html", {})
+          @@include("html/blocks/nav.html", {})
+          @@include("html/blocks/avatar.html", {})
+          @@include("html/pages/dashboard.html", {})
+      </div>
+    </div>
+
+
+    @@include("html/blocks/script.html", {})
+    
+  </body>
+</html>

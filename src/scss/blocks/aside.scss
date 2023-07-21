@@ -1,0 +1,27 @@
+.aside {
+
+  &__body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #29384d;
+    padding-left: 23px;
+    @media (max-width: $phoneWidth){
+      background-color: transparent;
+    }
+    & > *:not(:last-child){
+      margin: 0 25px 0 0;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: #fff;
+    i{
+      margin-right: 10px;
+    }
+  }
+}
