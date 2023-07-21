@@ -1,5 +1,4 @@
 .nav {
-
   &__body {
     @media (max-width: $phoneWidth) {
       width: 100%;
@@ -23,6 +22,7 @@
     }
     &:hover{
       background-color: rgba(0, 0, 0, .2);
+      transition: all 0.3s ease 0s;
     }
   }
 
@@ -41,6 +41,7 @@
     }
     &:hover{
       color: orange;
+      transition: all 0.3s ease 0s;
     }
   }
 }

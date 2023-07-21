@@ -250,6 +250,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav__item:hover {
   background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease 0s;
 }
 .nav__link {
   color: #fff;
@@ -269,6 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav__link:hover {
   color: orange;
+  transition: all 0.3s ease 0s;
 }
 
 .aside__body {
@@ -339,6 +341,43 @@ h1, h2, h3, h4, h5, h6 {
   .avatar__title {
     display: none;
   }
+}
+
+.index__container {
+  flex: 1 1 auto;
+  width: 768px;
+  margin: 0 auto;
+  background-color: #182948;
+  background-image: url("../img/bg.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.index__logo {
+  margin-bottom: 32px;
+}
+.index__input input {
+  width: 368px;
+  height: 48px;
+  opacity: 0.6;
+  border-radius: 24px;
+  background-color: #242b3c;
+  font-size: 17px;
+  color: #5f6e8f;
+  text-align: center;
+  line-height: 1.18;
+  margin-bottom: 16px;
+}
+.index__btn input {
+  width: 368px;
+  height: 48px;
+  border-radius: 24px;
+  background-image: linear-gradient(to left, #f1cd51, #d6566b);
+  font-size: 17px;
+  line-height: 1.18;
+  text-align: center;
+  color: #fff;
 }
 
 .trips__grid {
