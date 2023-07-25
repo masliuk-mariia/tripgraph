@@ -241,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .nav__item {
-  padding: 9px 10px 9px 23px;
+  padding: 9px 5px 9px 23px;
 }
 @media (max-width: 500px) {
   .nav__item {
@@ -249,11 +249,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .nav__item:hover {
+  transition: all 0.5s ease 0s;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease 0s;
+}
+.nav__item_active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav__item_active a {
+  color: orange;
 }
 .nav__link {
   color: #fff;
+  display: flex;
 }
 .nav__link i {
   margin-right: 13px;

@@ -16,18 +16,25 @@
   }
 
   &__item {
-    padding: 9px 10px 9px 23px;
+    padding: 9px 5px 9px 23px;
     @media(max-width: $phoneWidth){
       padding: 0;
     }
     &:hover{
+      transition: all 0.5s ease 0s;
       background-color: rgba(0, 0, 0, .2);
-      transition: all 0.3s ease 0s;
+    }
+    &_active{
+      background-color: rgba(0, 0, 0, .2);
+      a{
+        color: orange;
+      }
     }
   }
 
   &__link {
     color: #fff;
+    display: flex;
     i{
       margin-right: 13px;
       @media(max-width: $phoneWidth){
@@ -43,5 +50,6 @@
       color: orange;
       transition: all 0.3s ease 0s;
     }
+   
   }
 }
