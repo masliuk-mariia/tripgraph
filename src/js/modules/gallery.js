@@ -167,7 +167,8 @@ function makeCalendar(){
   makeMonth(m_from);
   makeMonth(m_to);
   
-  calendar_frm.addEventListener("submit", ()=>{
+  calendar_frm.addEventListener("submit", (e)=>{
+    e.preventDefault();
     const search_start = '2022-' + m_from.value + '-' + day_from.value;
     const search_end = '2022-' + m_to.value + '-' + day_to.value;
 
