@@ -10,13 +10,41 @@ let gal;
 const monthArr = ['Jan', 'Feb', 'Mat', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 class Gallery{
-  constructor(url='database.json', startDate_s=0, endDate_s=0){
-    this.startDate_s = startDate_s;
-    this.endDate_s = endDate_s;
+  constructor(url='database.json'){
+    this.startDate_s = 0;
+    this.endDate_s = 0;
     this.galleryItems = [];
     this.sortItems = [];
     this.url = url;
     this.container = document.querySelector(".trips__row");
+  }
+  set startDate(value){
+    if (value==0){
+      this.startDate_s = 0;
+      return;
+    }
+    let t1 = new Date(value).toISOString();
+    t1 = Date.parse(t1);
+    this.startDate_s = t1;
+  }
+  get startDate(){
+    const t =  new Date(this.startDate_s);
+    const str_t = monthArr[t.getMonth()] + ' ' + t.getDate();
+    return str_t;
+  }
+  set endDate(value){
+    if (value==0){
+      this.endDate_s = 0;
+      return;
+    }
+    let t1 = new Date(value).toISOString();
+    t1 = Date.parse(t1);
+    this.endDate_s = t1;
+  }
+  get endDate(){
+    const t =  new Date(this.endDate_s);
+    const str_t = monthArr[t.getMonth()] + ' ' + t.getDate();
+    return str_t;
   }
   fetchItems(){
     getResources(this.url)
@@ -127,32 +155,35 @@ function makeMonth(selector){
 }
 
 function makeCalendar(){
+  const calendar_title = document.querySelector('.calendar__title');
   const calendar_frm = document.querySelector(".calendar__frm");
   const day_from = calendar_frm.querySelector("#date_from_day");
   const day_to = calendar_frm.querySelector("#date_to_day");
   const m_from = calendar_frm.querySelector("#date_from_month");
   const m_to = calendar_frm.querySelector("#date_to_month");
-  const close = calendar_frm.querySelector("#calendar_close");
+  const close_btn = calendar_frm.querySelector("#calendar_close");
   makeDays(day_from);
   makeDays(day_to);
   makeMonth(m_from);
   makeMonth(m_to);
   
   calendar_frm.addEventListener("submit", ()=>{
-    let search_start = '2022-' + m_from.value + '-' + day_from.value;
-    search_start = new Date(search_start).toISOString();
-    const search_start_sec = Date.parse(search_start);
-    let search_end = '2022-' + m_to.value + '-' + day_to.value;
-    search_end = new Date(search_end).toISOString();
-    const search_end_sec = Date.parse(search_end);
-    gal.startDate_s = search_start_sec;
-    gal.endDate_s = search_end_sec;
+    const search_start = '2022-' + m_from.value + '-' + day_from.value;
+    const search_end = '2022-' + m_to.value + '-' + day_to.value;
+
+    gal.startDate = search_start;
+    gal.endDate = search_end;
     gal.sortItems = gal.filterItems();
     gal.showItems();
+    calendar_title.style.display="block";
+    const title_fromDate = document.querySelector("#title_from-date");
+    title_fromDate.textContent = gal.startDate;
+    const title_toDate = document.querySelector("#title_to-date");
+    title_toDate.textContent = gal.endDate;
     document.querySelector(".calendar").classList.remove("show");
     document.querySelector(".calendar").classList.add("hide");
   });
-  close.addEventListener("click", ()=>{
+  close_btn.addEventListener("click", ()=>{
     document.querySelector(".calendar").classList.remove("show");
     document.querySelector(".calendar").classList.add("hide");
   });
@@ -168,14 +199,16 @@ export function main(){
   const check_container = document.querySelector(".trips__row");
   if (!check_container){return;}
   makeCalendar();
-  gal = new Gallery('http://localhost:3000/files/database.json', 0, 0);
+  gal = new Gallery('files/database.json');
   gal.fetchItems();
 
   const list_btn = document.querySelector("#list_show");
   if (!list_btn){return;}
   list_btn.addEventListener("click", ()=>{
-    gal.startDate_s = 0;
-    gal.endDate_s = 0;
+    const calendar_title = document.querySelector('.calendar__title');
+    calendar_title.style.display="none";
+    gal.startDate = 0;
+    gal.endDate = 0;
     gal.sortItems = gal.filterItems();
     gal.showItems();
   })

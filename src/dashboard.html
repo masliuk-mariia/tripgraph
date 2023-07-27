@@ -5,12 +5,15 @@
   })
   <body>
     <div class="_wrapper">
-      <div class="_container">
+      <!-- <div class="_container"> -->
+        <div class="dashboard__grid">
           @@include("html/blocks/header.html", {})
-          @@include("html/blocks/nav.html", {})
+          @@include("html/blocks/nav.html", {"active": "trips"})
           @@include("html/blocks/avatar.html", {})
           @@include("html/pages/dashboard.html", {})
-      </div>
+        </div>
+        
+      <!-- </div> -->
     </div>
 
 
@@ -18,3 +21,4 @@
     
   </body>
 </html>
+

@@ -52,6 +52,11 @@
   grid-area: main;
   &__container {
     padding: 9px;
+    .calendar__title{
+      color: #fff;
+      font-size: 26px;
+      display: none;
+    }
   }
 
   &__row {
@@ -156,4 +161,5 @@
     }
 
   }
+
 }
