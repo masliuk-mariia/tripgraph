@@ -1,3 +1,6 @@
 import * as flsFunction from "./modules/functions.js";
-flsFunction.isWeb();
+import * as gal from "./modules/gallery.js";
 
+
+flsFunction.isWeb();
+gal.main();

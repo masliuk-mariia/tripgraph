@@ -1,4 +1,5 @@
 .aside {
+  position: relative;
 
   &__body {
     height: 100%;
@@ -23,5 +24,49 @@
     i{
       margin-right: 10px;
     }
+  }
+  .calendar{
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    width: 250px;
+    height: 160px;
+    background-color: #29384d;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 10;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0px 40px 40px rgba(255, 255, 255, .9);
+    h3{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &__frm{
+      padding: 10px 0;
+    }
+  }
+  .calendar__row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .calendar__column{
+
+  }
+  .calendar__btn{
+    width: 98px;
+    height: 28px;
+    border-radius: 24px;
+    background-color: #29384d;
+    border: 1px solid #aaa;
+    font-size: 17px;
+    line-height: 1.18;
+    text-align: center;
+    color: #fff;
+
+  }
+  .calendar__btn-orange{
+    background-image: linear-gradient(to left, #f1cd51, #d6566b);
   }
 }

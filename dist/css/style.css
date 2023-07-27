@@ -211,6 +211,16 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
+.hide {
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.show {
+  opacity: 1;
+  transition: all 0.5s ease 0s;
+}
+
 .header {
   background-color: #29384d;
 }
@@ -219,13 +229,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 136px;
   height: 35px;
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .header__logo {
     padding: 0 0 0 23px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .nav__body {
     width: 100%;
     height: 63px;
@@ -238,12 +248,13 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 20;
   }
 }
 .nav__item {
   padding: 9px 5px 9px 23px;
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .nav__item {
     padding: 0;
   }
@@ -252,11 +263,30 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease 0s;
   background-color: rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 765px) {
+  .nav__item:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .nav__item:hover a {
+    color: #29384d;
+    font-size: 24px;
+  }
+}
 .nav__item_active {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .nav__item_active a {
   color: orange;
+}
+@media (max-width: 765px) {
+  .nav .nav__item_active {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .nav .nav__item_active a {
+    color: #000;
+    font-size: 24px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  }
 }
 .nav__link {
   color: #fff;
@@ -265,12 +295,12 @@ h1, h2, h3, h4, h5, h6 {
 .nav__link i {
   margin-right: 13px;
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .nav__link i {
     margin: 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .nav__link span {
     display: none;
   }
@@ -280,6 +310,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease 0s;
 }
 
+.aside {
+  position: relative;
+}
 .aside__body {
   height: 100%;
   width: 100%;
@@ -288,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #29384d;
   padding-left: 23px;
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .aside__body {
     background-color: transparent;
   }
@@ -302,11 +335,51 @@ h1, h2, h3, h4, h5, h6 {
 .aside__link i {
   margin-right: 10px;
 }
+.aside .calendar {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  width: 250px;
+  height: 160px;
+  background-color: #29384d;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 10;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0px 40px 40px rgba(255, 255, 255, 0.9);
+}
+.aside .calendar h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.aside .calendar__frm {
+  padding: 10px 0;
+}
+.aside .calendar__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.aside .calendar__btn {
+  width: 98px;
+  height: 28px;
+  border-radius: 24px;
+  background-color: #29384d;
+  border: 1px solid #aaa;
+  font-size: 17px;
+  line-height: 1.18;
+  text-align: center;
+  color: #fff;
+}
+.aside .calendar__btn-orange {
+  background-image: linear-gradient(to left, #f1cd51, #d6566b);
+}
 
 .avatar__body {
   padding: 0 0 0 28px;
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .avatar__body {
     padding: 0;
     width: 100%;
@@ -316,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
 .avatar__logo {
   margin: 15px 0 18px 0;
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .avatar__logo {
     height: 100%;
     padding-right: 23px;
@@ -332,7 +405,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 48px;
   border-radius: 50%;
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .avatar__logo img {
     width: 32px;
     height: 32px;
@@ -344,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.26px;
   color: #fefefe;
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .avatar__title {
     display: none;
   }
@@ -398,7 +471,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-rows: 48px 1fr 158px;
   grid-template-areas: "header aside" "nav main" "avatar main";
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .trips__grid {
     width: 100%;
     padding: 0;
@@ -406,7 +479,7 @@ h1, h2, h3, h4, h5, h6 {
     background-image: none;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 765px) {
   .trips__grid {
     grid-template-columns: 1fr 38px;
     grid-template-rows: 48px 48px 1fr 63px;
@@ -428,4 +501,105 @@ h1, h2, h3, h4, h5, h6 {
 
 .avatar {
   grid-area: avatar;
+}
+
+.trips {
+  grid-area: main;
+}
+.trips__container {
+  padding: 9px;
+}
+.trips__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -7.5px;
+}
+.trips__column {
+  flex: 0 0 50%;
+  padding: 7.5px;
+}
+@media (max-width: 500px) {
+  .trips__column {
+    flex: 0 0 100%;
+  }
+}
+.trips__item {
+  position: relative;
+}
+.trips__card {
+  padding: 14px 16px;
+  position: relative;
+  z-index: 4;
+  background-color: #fff;
+  min-height: 127px;
+}
+.trips__title {
+  position: relative;
+  z-index: 4;
+  font-size: 23px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.trips__rating {
+  position: relative;
+  z-index: 4;
+}
+.trips__rating span {
+  color: #fff;
+}
+.trips__rating .checked {
+  color: orange;
+}
+.trips__label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e7ebef;
+}
+.trips__link {
+  color: #ced6dd;
+}
+.trips__date time {
+  font-size: 23px;
+  font-weight: 500;
+  color: #010101;
+  line-height: 0.87;
+}
+.trips__date time span {
+  font-size: 21px;
+  font-weight: 300;
+}
+.trips__descr {
+  font-size: 15px;
+  line-height: 1.33;
+  font-weight: 300;
+}
+.trips__image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 16px;
+}
+.trips__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.trips__image:after {
+  content: "";
+  min-width: 100%;
+  min-height: 147px;
+  background: linear-gradient(to bottom, rgba(39, 53, 71, 0), #1a2e4a);
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

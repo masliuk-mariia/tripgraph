@@ -12,6 +12,7 @@
       position: fixed;
       bottom: 0;
       left: 0;
+      z-index: 20;
     }
   }
 
@@ -23,11 +24,28 @@
     &:hover{
       transition: all 0.5s ease 0s;
       background-color: rgba(0, 0, 0, .2);
+      @media (max-width: $phoneWidth){
+        background-color: rgba(0, 0, 0, 0);
+        a{
+          color: #29384d;
+          font-size: 24px;
+        }
+      }
     }
     &_active{
       background-color: rgba(0, 0, 0, .2);
       a{
         color: orange;
+      }
+    }
+  }
+  @media (max-width: $phoneWidth) {
+    .nav__item_active{
+      background-color: rgba(0, 0, 0, 0);
+      a{
+        color: #000;
+        font-size: 24px;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, .4);
       }
     }
   }

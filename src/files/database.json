@@ -1,0 +1,68 @@
+{
+  "gallery" :[
+    {
+      "img": "img/gallery/photo01.jpg",
+      "title": "Paris - Venice",
+      "rating": 4,
+      "date_start": "2022-09-17",
+      "date_end": "2022-09-29",
+      "descr": "My solo trip to Paris for two months in autumn 2018 with friends"
+    },
+    {
+      "img": "img/gallery/photo2.jpg",
+      "title": "Austria",
+      "rating": 3,
+      "date_start": "2022-02-12",
+      "date_end": "2022-02-20",
+      "descr": "Austria can be one of the greatest places to live - if you fit in."
+    },
+    {
+      "img": "img/gallery/photo3.jpg",
+      "title": "Iceland",
+      "rating": 4,
+      "date_start": "2022-08-11",
+      "date_end": "2022-08-25",
+      "descr": "We offer private day tours to the most amazing stops such as Golden circle, south coast."
+    },
+    {
+      "img": "img/gallery/photo4.jpg",
+      "title": "Norway, Oslo",
+      "rating": 4,
+      "date_start": "2022-09-02",
+      "date_end": "2022-09-15",
+      "descr": "The city has a very distinct architectural style, and it's quite different from Copenhagen."
+    },
+    {
+      "img": "img/gallery/photo6.jpg",
+      "title": "Iceland",
+      "rating": 5,
+      "date_start": "2022-01-15",
+      "date_end": "2022-01-25",
+      "descr": "We offer private day tours to the most amazing stops such as Golden circle, south coast."
+    },
+    {
+      "img": "img/gallery/photo5.jpg",
+      "title": "Toronto",
+      "rating": 5,
+      "date_start": "2022-08-02",
+      "date_end": "2022-09-01",
+      "descr": "There are many cultural things to do in Toronto, it being a lively, cosmopolitan city"
+    },
+    {
+      "img": "img/gallery/photo7.jpg",
+      "title": "Amsterdam",
+      "rating": 4,
+      "date_start": "2022-09-11",
+      "date_end": "2022-10-25",
+      "descr": "Amsterdam is famous for its canals and dikes."
+    },
+    {
+      "img": "img/gallery/photo8.jpg",
+      "title": "Santa Cruz",
+      "rating": 3,
+      "date_start": "2022-09-17",
+      "date_end": "2022-10-12",
+      "descr": "Santa Cruz is the land of surf, mountains, hippy culture, redwood-covered mountains"
+    }
+  ]
+}
