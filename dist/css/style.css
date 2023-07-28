@@ -352,7 +352,7 @@ body {
   box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.5);
 }
 .aside .calendar h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 .aside .calendar__frm {
@@ -522,7 +522,7 @@ body {
 }
 .trips__container .calendar__title {
   color: #fff;
-  font-size: 26px;
+  font-size: 24px;
   display: none;
   margin-bottom: 10px;
 }
