@@ -7,7 +7,7 @@ const getResources = async(url)=>{
 };
 let gal;
 
-const monthArr = ['Jan', 'Feb', 'Mat', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const monthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 class Gallery{
   constructor(url='database.json'){
@@ -75,7 +75,7 @@ class Gallery{
     const t2 = this.endDate_s;
     const result = this.galleryItems.filter(function (el){
       return el.ms_start >= t1 &&
-              el.ms_end <= t2;
+              el.ms_start <= t2;
     });
     result.sort((a, b) => a.ms_start - b.ms_start);
     return result;
