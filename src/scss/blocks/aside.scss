@@ -38,8 +38,11 @@
     padding: 10px;
     color: #fff;
     box-shadow: 0px 5px 5px rgba(255, 255, 255, .5);
+    @media (max-width: $phoneWidth) {
+      background-color: #2d3a53;;
+    }
     h3{
-      font-size: 18px;
+      font-size: px;
       margin-bottom: 10px;
     }
     &__frm{
