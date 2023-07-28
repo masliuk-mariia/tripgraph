@@ -126,9 +126,9 @@ class Gallery{
       <div class="trips__card">
         <div class="trips__label">
           <div class="trips__date">
-          ${time}
-        </div>
-        <a  class="trips__link" href="#">&gt;</a>
+            ${time}
+          </div>
+          <a  class="trips__link" href="#">&gt;</a>
         </div>
         <div class="trips__descr">${cur.descr}</div>
       </div>

@@ -1,0 +1,31 @@
+.progressBar {
+  --per: 50%;
+  --colorfrom: #d6566b;
+  --colorto:  #f1cd51;
+  background-color: #2f425c;
+  // width: 176px;
+  width: 100%;
+  height: 16px;
+  padding: 0;
+  border-radius: 50px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.progressBarRect {
+  background-image: linear-gradient(90deg, var(--colorfrom) 0%, var(--colorto) 100%);
+  height: 100%;
+  width:var(--per);
+  border-radius: inherit;
+  animation: progressLineTransmission 1s .5s both;
+}
+@keyframes progressLineTransmission {
+  from {
+      width: 0%;
+  }
+  to {
+      width: var(--per);
+  }
+}

@@ -2,6 +2,8 @@
 
   &__body {
     padding: 0 0 0 28px;
+    display: flex;
+    flex-direction: column;
     @media (max-width: $phoneWidth){
       padding: 0;
       width: 100%;
@@ -34,7 +36,7 @@
   &__title {
     font-size: 19px;
     font-weight: 300;
-    line-height: 1.26px;
+    line-height: 1.26;
     color: #fefefe;
     @media (max-width: $phoneWidth){
       display: none;

@@ -4,6 +4,9 @@
 @import './_variables.scss';
 @import './_base.scss';
 
+@import '../modules/progressbar/progressbar.scss';
+@import '../modules/roundpie/roundpie.scss';
+
 @import './blocks/header.scss';
 @import './blocks/nav.scss';
 @import './blocks/aside.scss';
@@ -12,5 +15,7 @@
 @import './pages/index.scss';
 @import './pages/trips.scss';
 @import './pages/dashboard.scss';
+@import './blocks/dashboard/statistics.scss';
+
 
 

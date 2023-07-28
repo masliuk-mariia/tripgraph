@@ -37,6 +37,7 @@
   grid-area: header;
 }
 .nav{
+  margin-right: 64px;
   grid-area: nav;
 }
 .aside{
@@ -93,6 +94,8 @@
     z-index: 4;
     background-color: #fff;
     min-height: 127px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
   &__title {
     position: relative;
@@ -126,7 +129,7 @@
     color: #ced6dd;
   }
   &__date {
-
+    color: #010101;
     time{
       font-size: 23px;
       font-weight: 500;
@@ -143,6 +146,7 @@
     font-size: 15px;
     line-height: 1.33;
     font-weight: 300;
+    color: #010101;
   }
 
   &__image {
@@ -159,6 +163,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
     }
     &:after{
       content: '';

@@ -42,3 +42,39 @@
 .avatar{
   grid-area: avatar;
 }
+
+
+
+.dashboard {
+  grid-area: main;
+  margin: 16px 0;
+  @media(max-width: $phoneWidth){
+    margin: 0;
+  }
+  &__statistic {
+  }
+
+  &__content {
+    padding: 0 24px 16px 0;
+    @media(max-width: $phoneWidth){
+      padding: 0 24px;
+    }
+  }
+}
+
+.header {
+
+  &__title {
+    min-height: 32px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, .1);
+    display: inline-block;
+    line-height: 2.82;
+    padding: 0 11px;
+    font-size: 11px;
+    color: #2d415c;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+  }
+}
