@@ -156,18 +156,18 @@ function makeMonth(selector){
 
 function makeCalendar(){
   const calendar_title = document.querySelector('.calendar__title');
+  const search__btn = document.querySelector("#calendar_search");
   const calendar_frm = document.querySelector(".calendar__frm");
   const day_from = calendar_frm.querySelector("#date_from_day");
   const day_to = calendar_frm.querySelector("#date_to_day");
   const m_from = calendar_frm.querySelector("#date_from_month");
   const m_to = calendar_frm.querySelector("#date_to_month");
-  const close_btn = calendar_frm.querySelector("#calendar_close");
   makeDays(day_from);
   makeDays(day_to);
   makeMonth(m_from);
   makeMonth(m_to);
   
-  calendar_frm.addEventListener("submit", (e)=>{
+  search__btn.addEventListener("click", (e)=>{
     e.preventDefault();
     const search_start = '2022-' + m_from.value + '-' + day_from.value;
     const search_end = '2022-' + m_to.value + '-' + day_to.value;
@@ -184,11 +184,13 @@ function makeCalendar(){
     document.querySelector(".calendar").classList.remove("show");
     document.querySelector(".calendar").classList.add("hide");
   });
-  close_btn.addEventListener("click", ()=>{
+  document.querySelector("#calendar_close").addEventListener("click", (e)=>{
+    e.preventDefault();
     document.querySelector(".calendar").classList.remove("show");
     document.querySelector(".calendar").classList.add("hide");
   });
-  document.querySelector("#calendar_show").addEventListener("click", ()=>{
+  document.querySelector("#calendar_show").addEventListener("click", (e)=>{
+    e.preventDefault();
     document.querySelector(".calendar").classList.remove("hide"); 
     document.querySelector(".calendar").classList.add("show");
   })
@@ -205,7 +207,8 @@ export function main(){
 
   const list_btn = document.querySelector("#list_show");
   if (!list_btn){return;}
-  list_btn.addEventListener("click", ()=>{
+  list_btn.addEventListener("click", (e)=>{
+    e.preventDefault();
     const calendar_title = document.querySelector('.calendar__title');
     calendar_title.style.display="none";
     gal.startDate = 0;
