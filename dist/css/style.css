@@ -553,8 +553,12 @@ body {
 }
 .trips__item {
   position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .trips__card {
+  flex: 1 1 auto;
   padding: 14px 16px;
   position: relative;
   z-index: 4;
