@@ -94,6 +94,13 @@ class Gallery{
   }
   showItems(){
     this.container.innerHTML = '';
+    const calendar_msg = document.querySelector(".calendar__descr");
+    if (this.sortItems.length==0){
+      calendar_msg.textContent = 'No travel during this period.';
+    }
+    else{
+      calendar_msg.textContent = `Found ${this.sortItems.length} trips.`;
+    }
     this.sortItems.forEach(cur => {
       const rating = document.createElement("div");
       for (let i = 1; i < 6; i++){
@@ -156,6 +163,7 @@ function makeMonth(selector){
 
 function makeCalendar(){
   const calendar_title = document.querySelector('.calendar__title');
+  const calendar_descr = document.querySelector('.calendar__descr');
   const search__btn = document.querySelector("#calendar_search");
   const calendar_frm = document.querySelector(".calendar__frm");
   const day_from = calendar_frm.querySelector("#date_from_day");
@@ -177,6 +185,7 @@ function makeCalendar(){
     gal.sortItems = gal.filterItems();
     gal.showItems();
     calendar_title.style.display="block";
+    calendar_descr.style.display="block";
     const title_fromDate = document.querySelector("#title_from-date");
     title_fromDate.textContent = gal.startDate;
     const title_toDate = document.querySelector("#title_to-date");
@@ -211,6 +220,8 @@ export function main(){
     e.preventDefault();
     const calendar_title = document.querySelector('.calendar__title');
     calendar_title.style.display="none";
+    const calendar_descr = document.querySelector('.calendar__descr');
+    calendar_descr.style.display="none";
     gal.startDate = 0;
     gal.endDate = 0;
     gal.sortItems = gal.filterItems();

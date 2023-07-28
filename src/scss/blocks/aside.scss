@@ -29,13 +29,13 @@
     position: absolute;
     top: 43px;
     left: 10px;
-    width: 250px;
-    height: 160px;
+    width: 300px;
+    min-height: 180px;
     background-color: #29384d;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     z-index: 10;
-    padding: 20px;
+    padding: 10px;
     color: #fff;
     box-shadow: 0px 5px 5px rgba(255, 255, 255, .5);
     h3{
@@ -49,13 +49,20 @@
   .calendar__row{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .calendar__column{
+    font-size: 20px;
+    & > *:not(:last-child){
+      margin-right: 10q;
+    }
+    select{
+      width: 70px;
+    }
 
   }
   .calendar__btn{
-    width: 98px;
+    width: 120px;
     height: 28px;
     border-radius: 24px;
     background-color: #29384d;
@@ -64,7 +71,6 @@
     line-height: 1.18;
     text-align: center;
     color: #fff;
-
   }
   .calendar__btn-orange{
     background-image: linear-gradient(to left, #f1cd51, #d6566b);

@@ -29,7 +29,7 @@
     <li class="aside__item aside__item_list"><a href="#" id="list_show" class="aside__link"><i class="icon-list"></i>List</a></li>
   </ul>
   <section class="calendar hide">
-    <h3>Choice your period:</h3>
+    <h3>Please, choose the desired period :</h3>
     <form action="#" class="calendar__frm">
       <div class="calendar__row">
         <div class="calendar__column"><label for="date_from_day">Date from:</label></div>
@@ -46,9 +46,14 @@
           <select id="date_to_month"></select>
         </div>
       </div>
-
-      <button class="calendar__btn calendar__btn-orange" type="submit" id="calendar_search">Show</button>
-      <button class="calendar__btn" type="reset" id="calendar_close">Close</button>
+      <div class="calendar__row">
+        <div class="calendar__column">
+          <button class="calendar__btn calendar__btn-orange" type="submit" id="calendar_search">Show</button>
+        </div>
+        <div class="calendar__column"><button class="calendar__btn" type="reset" id="calendar_close">Close</button></div>
+      </div>
+      
+      
     </form>
   </section>
 </aside>
@@ -60,7 +65,8 @@
 </div>
           <section class="trips">
   <div class="trips__container">
-    <h3 class="calendar__title">Search result: <span id="title_from-date"></span> - <span id="title_to-date"></span></h3>
+    <h3 class="calendar__title">Search results: <span id="title_from-date"></span> - <span id="title_to-date"></span></h3>
+    <div class="calendar__descr"></div>
     <div class="trips__row">
     </div>
   </div>
