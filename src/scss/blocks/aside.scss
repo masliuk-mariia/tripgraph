@@ -6,7 +6,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #29384d;
+    background-color: rgb(41, 56, 77);
     padding-left: 23px;
     @media (max-width: $phoneWidth){
       background-color: transparent;
@@ -31,15 +31,15 @@
     left: 10px;
     width: 300px;
     min-height: 180px;
-    background-color: #29384d;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background-color: rgba(41, 56, 77, .8);
+    border: 1px solid #fff;
+    border-radius: 10px;
     z-index: 10;
     padding: 10px;
     color: #fff;
     box-shadow: 0px 5px 5px rgba(255, 255, 255, .5);
     @media (max-width: $phoneWidth) {
-      background-color: #2d3a53;;
+      // background-color: #2d3a53;;
     }
     h3{
       font-size: px;
